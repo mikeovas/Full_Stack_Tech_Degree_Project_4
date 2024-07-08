@@ -3,3 +3,5 @@
  * app.js */
 
 
+
+const letterPlaceholder = document.querySelector('#phrase ul');
