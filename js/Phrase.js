@@ -8,33 +8,21 @@ class Phrase {
       this.phrase = phrase.toLowerCase(); // Stores the phrase in lowercase
     }
 
-    /**
-    * Display phrase on game board
-    */
-    addPhraseToDisplay() {
+    addPhraseToDisplay() {                                                                    //Display phrase on game board
       const trimmedPhrase = this.phrase.split('');
       let HTMLForTrimmedPhrase;
 
       trimmedPhrase.forEach( currentCharacter => {
         const HTMLForTrimmedPhrase = document.createElement('li');
         if(currentCharacter !== " ") {
-          HTMLForTrimmedPhrase.classList.add('hide', 'letter', currentCharacter)
+          HTMLForTrimmedPhrase.classList.add('hide', 'letter')
         } else {
           HTMLForTrimmedPhrase.classList.add('space')
         }
-
-      HTMLForTrimmedPhrase.innerHTML = currentCharacter;
-      letterPlaceholder.appendChild(HTMLForTrimmedPhrase);
-
+        HTMLForTrimmedPhrase.innerHTML = currentCharacter;
+        letterPlaceholder.appendChild(HTMLForTrimmedPhrase);
       });
-
       
     };
-
-
-
-
-
-
 
   }
