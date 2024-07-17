@@ -5,6 +5,4 @@
 
 
 const letterPlaceholder = document.querySelector('#phrase ul');
-
-// const game = new Game();
-// game.getRandomPhrase().addPhraseToDisplay();
+const screenOverlay = document.querySelector('#overlay');
