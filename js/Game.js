@@ -33,11 +33,4 @@ class Game {
       console.log(this.activePhrase);
     };
 
-
-
-
-  }
-
-  // const game = new Game();
-  // game.startGame();
-  // console.log(`Active Phrase - phrase: ${game.activePhrase.phrase}`);
+  };

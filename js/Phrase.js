@@ -13,7 +13,7 @@ class Phrase {
       let HTMLForTrimmedPhrase;
 
       trimmedPhrase.forEach( currentCharacter => {
-        const HTMLForTrimmedPhrase = document.createElement('li');
+        HTMLForTrimmedPhrase = document.createElement('li');
         if(currentCharacter !== " ") {
           HTMLForTrimmedPhrase.classList.add('hide', 'letter')
         } else {
