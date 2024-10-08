@@ -25,4 +25,21 @@ class Phrase {
       
     };
 
+    /*** Checks if the provided letter is in the phrase.
+    * @param {string} letter - Letter to check
+    * @returns {boolean} - True if the letter is in the phrase, false otherwise
+    ***/
+
+    checkLetter(letter) {
+      return this.phrase.includes(letter);                                                      // Function logic to check if the letter is in the phrase
+    }
+
+
+
+
+
+
+
   }
+
+  

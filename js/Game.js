@@ -27,10 +27,9 @@ class Game {
     };
 
     startGame() {
-      overlay.style.display = 'none';
+      screenOverlay.style.display = 'none';
       this.activePhrase = this.getRandomPhrase();
       this.activePhrase.addPhraseToDisplay();
-      console.log(this.activePhrase);
     };
 
   };
