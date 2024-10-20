@@ -27,9 +27,21 @@ class Game {
     };
 
     startGame() {
+      const screenOverlay = document.querySelector('#overlay');
+
       screenOverlay.style.display = 'none';
       this.activePhrase = this.getRandomPhrase();
       this.activePhrase.addPhraseToDisplay();
+
     };
 
+    handleInteraction() {
+
+      // phrase.checkLetter(); 
+      // phrase.showMatchedLetter();
+    };
+
+
+
   };
+
