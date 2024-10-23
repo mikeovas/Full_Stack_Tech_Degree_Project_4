@@ -28,37 +28,27 @@ class Phrase {
     };
 
       /*** Checks if the provided letter is in the phrase.
-      * @param {string} letter - Letter to check
-      * @returns {boolean} - True if the letter is in the phrase, false otherwise
+        * @param {string} letter - Letter to check
+        * @returns {boolean} - True if the letter is in the phrase, false otherwise
       ***/
-      checkLetter(letter) {
-        return this.phrase.includes(letter); 
-      };
+        checkLetter(letter) {
+          return this.phrase.includes(letter); 
+        };
 
-      showMatchedLetter(letter) {
-        // Select all elements with the matching letter and hide class
-        const matchingLetters = document.querySelectorAll(`.hide.letter.${letter}`);
-
-        // Loop through the matching letters and replace the 'hide' class with 'show'
-        matchingLetters.forEach(li => {
-            li.classList.replace('hide', 'show');
-        });
+        
+      /**
+        * Displays passed letter on screen after a match is found
+        * @param (string) letter - Letter to display
+      */ 
+        showMatchedLetter(letter) {
+          const matchingLetters = document.querySelectorAll(`.letter`);               // Select all elements with the matching letter and hide class        
+          matchingLetters.forEach(li => {                                                  // Loop through the matching letters and replace the 'hide' class with 'show'
+            if(li.textContent === letter) {
+                li.classList.replace('hide', 'show');
+              }
+          });
 
 
 
    }}
 
-
-
-
-    //checks if chosen letter is correct and if so adds 'show' class in order to show the chosen letter in the phrase
-// stores all li elements in a variable and compares the letter in the li element with the letter chosen in the click event below
-
-// for (i = 0; i < liWithLetters.length; i++) {
-//   const li = liWithLetters[i];
-//   const letterInPhrase = li.textContent;
-//   if (choice === letterInPhrase) {
-//     li.classList.add('show');
-//     match = true;
-//   }
-// }
