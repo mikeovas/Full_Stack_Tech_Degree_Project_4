@@ -35,7 +35,6 @@ class Game {
 
     };
 
-
     
     /**
     * Checks for all letters in the phrase to have been revealed
@@ -56,7 +55,6 @@ class Game {
         const hearts = document.querySelectorAll('.tries img');
         hearts[this.missed].src = 'images/lostHeart.png';                      // replace live heart with a lost heart
         this.missed += 1;
-        console.log(hearts);
 
         if (this.missed === 5) {
           this.gameOver(false);                                             // End the game if all lives are lost
@@ -70,7 +68,6 @@ class Game {
     */
       gameOver(gameWon) {
         const message = document.getElementById('game-over-message');
-
         overlay.style.display = 'flex';                                    // Show the overlay again
 
         if (gameWon) {
@@ -97,9 +94,15 @@ class Game {
 handleInteraction() {
   // phrase.checkLetter(); 
   // phrase.showMatchedLetter();
-};
+  };
 
 
 
   };
 
+
+
+
+
+  
+    

@@ -41,7 +41,7 @@ class Phrase {
         * @param (string) letter - Letter to display
       */ 
         showMatchedLetter(letter) {
-          const matchingLetters = document.querySelectorAll(`.letter`);               // Select all elements with the matching letter and hide class        
+          const matchingLetters = document.querySelectorAll(`.letter`);                     // Select all elements with the matching letter and hide class        
           matchingLetters.forEach(li => {                                                  // Loop through the matching letters and replace the 'hide' class with 'show'
             if(li.textContent === letter) {
                 li.classList.replace('hide', 'show');
