@@ -91,18 +91,25 @@ class Game {
 
 
 // The logic and branching to handle several steps to run this application are included in this method
-handleInteraction() {
-  // phrase.checkLetter(); 
-  // phrase.showMatchedLetter();
+    handleInteraction(button) {
+      console.log(button);
+      let letter = button.textContent;
+      button.disabled = true;                                                         // Disable the selected button
+   
+      if (this.activePhrase.checkLetter(letter)) {
+        button.classList.add('chosen');                                               // Add 'chosen' class if correct
+        this.activePhrase.showMatchedLetter(letter);                                  // Show matched letter
+        if (this.checkForWin()) {
+            this.gameOver(true);                                                      // If player wins
+        }
+    } else {
+        button.classList.add('wrong');                                                // Add 'wrong' class if incorrect
+        this.removeLife();                                                            // Remove a life
+    }
+
   };
 
 
-
-  };
-
-
-
-
-
+}
   
     
