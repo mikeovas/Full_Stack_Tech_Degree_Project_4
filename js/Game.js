@@ -92,10 +92,8 @@ class Game {
 
 // The logic and branching to handle several steps to run this application are included in this method
     handleInteraction(button) {
-      console.log(button);
       let letter = button.textContent;
-      button.disabled = true;                                                         // Disable the selected button
-   
+      button.disabled = true;                                                         // Disable the selected button   
       if (this.activePhrase.checkLetter(letter)) {
         button.classList.add('chosen');                                               // Add 'chosen' class if correct
         this.activePhrase.showMatchedLetter(letter);                                  // Show matched letter
@@ -106,10 +104,20 @@ class Game {
         button.classList.add('wrong');                                                // Add 'wrong' class if incorrect
         this.removeLife();                                                            // Remove a life
     }
-
   };
-
-
 }
   
-    
+/**
+ * This eventlistener allows players to use their physical keyboard
+ **/
+  document.addEventListener('keyup', (e) => {
+    const pressedKey = e.key.toLowerCase();                                           // Converts the pressed key to lower case to be used for comparison
+    const keys = document.querySelectorAll('#qwerty button');
+  
+  // Loop through the onscreen keys to find the corresponding key
+    keys.forEach(key => {
+        if (key.textContent === pressedKey && !key.disabled) {
+          game.handleInteraction(key);                                                // If the pressed key was not diabled the handleInteraction function is called
+      }
+  });
+});
