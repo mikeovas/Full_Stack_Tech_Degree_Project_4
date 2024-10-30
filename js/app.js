@@ -3,6 +3,7 @@
 //  * Aiming for Exceeds Expectations 
 //  * app.js ***/
 
+    const overlay = document.querySelector('#overlay');
     const buttonReset = document.querySelector('#btn__reset');
     const keys = document.querySelectorAll('#qwerty button');
     const phraseUl = document.querySelector('#phrase ul');  
