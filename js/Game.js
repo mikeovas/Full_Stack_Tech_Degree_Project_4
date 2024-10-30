@@ -105,16 +105,3 @@
 };
   
 
-/**
- * This eventlistener allows a player to use their physical keyboard
- **/
-  document.addEventListener('keyup', (e) => {
-    const pressedKey = e.key.toLowerCase();                                           // Converts the pressed key to lower case to be used for comparison
-    const keys = document.querySelectorAll('#qwerty button');                         // Selects the keys on the keypad
-  
-    keys.forEach(key => {                                                             // Loops through the keys to find the pressed key and ensure it hasn't been disabled by already being chosen
-        if (key.textContent === pressedKey && !key.disabled) {
-          game.handleInteraction(key);                                                // If the pressed key was not diabled the handleInteraction function is called
-      }
-  });
-});
